@@ -16,9 +16,9 @@ def compute_score(user_questionnaire):
     current_question = UserQuestionnaire.objects.get(user_profile=user_questionnaire.user_profile,
                                                      day=user_questionnaire.day).questionnaire
     for q in UserQuestionnaire.objects.filter(user_profile=user_questionnaire.user_profile,
-                                              day__gt=user_questionnaire.day-timedelta(days=7)):
+                                              day__gt=user_questionnaire.day-timedelta(days=7),
+                                              day__lte=user_questionnaire.day):
         questions.append(Questionnaire.objects.get(id=q.questionnaire.id))
-
     for q in questions:
         score += (q.liquid_stool * 2)
         score += (q.abdominal_pain * 5)

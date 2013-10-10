@@ -27,8 +27,8 @@ class GraphView(TemplateView):
         user = self.request.user
         profile = UserProfile.objects.get(user__id=user.id)
         user_questionnaires = UserQuestionnaire.objects.filter(user_profile=profile)
-        data = {}
+        data = []
         for q in user_questionnaires:
-            data[q.day] = compute_score(q)
+            data.append([str(q.day), compute_score(q)])
         context['data'] = data
         return context

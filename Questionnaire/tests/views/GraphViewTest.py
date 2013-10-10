@@ -21,9 +21,9 @@ class GraphViewTest(TestCase):
         user = User.objects.get(username='tempuser')
         profile = UserProfile.objects.get(user__id=user.id)
         user_questionnaires = UserQuestionnaire.objects.filter(user_profile=profile)
-        data = {}
+        data = []
         for q in user_questionnaires:
-            data[q.day] = compute_score(q)
+            data.append([q.day, compute_score(q)])
         response = self.client.get(reverse("questionnaire_graph"))
         self.assertEqual(200, response.status_code)
         self.assertEqual(response.context['data'], data)

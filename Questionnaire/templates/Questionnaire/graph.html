@@ -25,13 +25,10 @@
             },
             series: [{
                 name: 'Weekly Scores',
-                data: {{ score|safe }}
+                data: {{ data|safe }}
             }]
         });
     });
     </script>
-    <div id="container" style="width:100%; height:400px;">
-
-
-    </div>
+    <div id="container" style="width:100%; height:400px;"></div>
 {% endblock %}
