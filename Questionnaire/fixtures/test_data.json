@@ -1,0 +1,78 @@
+[
+  {
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2013-10-08T02:21:28.828Z",
+      "groups": [
+        
+      ],
+      "user_permissions": [
+        
+      ],
+      "password": "pbkdf2_sha256$10000$PJbqaNdbRHye$rU9SfGft+SABk8Fde8EOr6wC9PsEOp92dDIE8Un9eF8=",
+      "email": "",
+      "date_joined": "2013-10-08T02:21:28.828Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "auth.user",
+    "fields": {
+      "username": "tempuser",
+      "first_name": "Temporary",
+      "last_name": "User",
+      "is_active": true,
+      "is_superuser": false,
+      "is_staff": false,
+      "last_login": "2013-10-08T04:10:52.440Z",
+      "groups": [
+        
+      ],
+      "user_permissions": [
+        
+      ],
+      "password": "pbkdf2_sha256$10000$PJbqaNdbRHye$rU9SfGft+SABk8Fde8EOr6wC9PsEOp92dDIE8Un9eF8=",
+      "email": "tempuser@blahblahblahblah.com",
+      "date_joined": "2013-10-08T04:10:52.440Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "Questionnaire.userprofile",
+    "fields": {
+      "city": "Seattle",
+      "diagnosis_year": 2000,
+      "gender": "Male",
+      "standard_weight": 150,
+      "diagnosis_month": "January",
+      "state": "Washington",
+      "user": 2,
+      "country": "USA",
+      "birth_date": "1920-01-01",
+      "treatments": "None"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "Questionnaire.userprofile",
+    "fields": {
+      "city": "Seattle",
+      "diagnosis_year": 2000,
+      "gender": "Male",
+      "standard_weight": 150,
+      "diagnosis_month": "January",
+      "state": "Washington",
+      "user": 1,
+      "country": "USA",
+      "birth_date": "1920-01-01",
+      "treatments": "None"
+    }
+  }
+]

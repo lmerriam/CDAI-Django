@@ -1,0 +1,2 @@
+from UserProfileFormTest import UserProfileFormTest
+from QuestionnaireFormTest import QuestionnaireFormTest

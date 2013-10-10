@@ -1,0 +1,3 @@
+from QuestionnaireView import QuestionnaireView
+from UserProfileView import UserProfileView
+from GraphView import GraphView
