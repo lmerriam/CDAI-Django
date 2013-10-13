@@ -35,9 +35,9 @@ class QuestionnaireFormTest(TestCase):
             'hematocrit': 42,
         }
         form = QuestionnaireForm(data=data)
-        print form.errors
         self.assertTrue(form.is_valid())
         self.assertEqual(form.cleaned_data['date'], datetime.date.today())
+        self.assertEqual(form.fields['date'].widget.attrs, {'class': 'date_input'})
 
     def test_valid_questionnaire_form(self):
         """
@@ -62,3 +62,4 @@ class QuestionnaireFormTest(TestCase):
                 self.assertEqual(cleaned[key], data[key])
             else:
                 self.assertEqual(cleaned[key], datetime.datetime.strptime(data[key], '%Y-%m-%d').date())
+        self.assertEqual(form.fields['date'].widget.attrs, {'class': 'date_input'})
