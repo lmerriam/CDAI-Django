@@ -34,6 +34,6 @@ def compute_score(user_questionnaire):
     if weight_score < -9:
         score += -10
     else:
-        score += weight_score
+        score += int(weight_score)
     return score
 
