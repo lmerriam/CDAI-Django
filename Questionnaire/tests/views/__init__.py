@@ -1,3 +1,4 @@
 from UserProfileViewTest import UserProfileViewTest
 from QuestionnaireViewTest import QuestionnaireViewTest
 from GraphViewTest import GraphViewTest
+from LoginRedirectViewTest import LoginRedirectViewTest

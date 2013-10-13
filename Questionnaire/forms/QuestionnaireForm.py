@@ -13,6 +13,7 @@ class QuestionnaireForm(forms.ModelForm):
         """
         super(QuestionnaireForm, self).__init__(*args, **kwargs)
         self.fields['date'] = forms.DateField(required=False)
+        self.fields['date'].widget.attrs = {'class': 'date_input'}
 
     def clean_date(self):
         """
